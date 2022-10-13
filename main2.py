@@ -8,8 +8,6 @@ afc_east_west_wins = {'bills': 4,
                       'raiders': 1}
 largest_so_far = 'raiders'
 for team_name in afc_east_west_wins.keys():
-    print(f"The {team_name} have {afc_east_west_wins[team_name]} wins so far")
-
-if afc_east_west_wins.keys() == largest_so_far:
-    afc_east_west_wins = [team_name]
-
+    if afc_east_west_wins[team_name] > afc_east_west_wins[largest_so_far]:
+        largest_so_far = team_name
+print(f"The team: {largest_so_far} has the most wins with {afc_east_west_wins[largest_so_far]} wins")
