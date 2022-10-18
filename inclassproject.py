@@ -1,4 +1,4 @@
-word_file = open("www.gutenberg.org.txt", 'r')
+word_file = open("www.gutenberg.org.txt", 'r', encoding='UTF8')
 word_lines = word_file.readlines()
 word_counts = {'the': 0}
 for word_line in word_lines:
@@ -11,4 +11,6 @@ for word_line in word_lines:
            #same as word_counts[current_word] = word_counts[current_word]+1
         else:
             word_counts[current_word] = 1
-print(word_counts)
+for word, count in word_counts.items():
+    print(f"{word}:  \t {count}")
+
